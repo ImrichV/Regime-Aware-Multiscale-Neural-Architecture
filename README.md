@@ -1,63 +1,61 @@
-# Multitimeframe-Market-Intelligence
-Research proposal for hierarchical multitimeframe representation learning in non-stationary financial markets.
+# Regime-Aware Multiscale Neural Architecture
 
-# Multitimeframe Market Intelligence
+**RAMNA** is a modular deep-learning research architecture for path-dependent market representation, hierarchical multitimeframe reasoning, cross-sectional context, regime-aware specialist routing, historical-analogue retrieval, and uncertainty-controlled decision making.
 
 ## Overview
 
-This project explores a modular deep-learning architecture for understanding
-non-stationary financial market behaviour across multiple timeframes.
+Financial setups cannot be understood reliably from isolated indicator values. The same current candle or indicator reading can arise from very different price paths, market regimes, relative-strength conditions, and higher-timeframe structures.
 
-The system is intended to learn market structure directly from sequential
-OHLCV data rather than relying only on isolated technical indicators.
+RAMNA is designed to learn these relationships directly from sequential market data. Its purpose is to model how a market situation developed, how multiple timeframes interact, how an instrument behaves relative to its peers and the wider market, and when the system should abstain because the current situation is unfamiliar or unreliable.
 
 ## Research objectives
 
-The proposed architecture will investigate:
+The architecture investigates:
 
+- representation of the complete path leading into a market setup;
 - hierarchical reasoning across daily, 4-hour, 1-hour and intraday data;
-- representation of the path leading into a market setup;
 - relative-strength and cross-sectional market context;
-- market-regime recognition;
-- retrieval of historically similar market situations;
-- uncertainty estimation and abstention;
-- specialist models for different market structures and conditions;
-- robust validation across time periods, securities and market regimes.
+- latent market-regime recognition;
+- specialist neural models for different setup families and conditions;
+- retrieval of historically analogous market situations;
+- continuous human-style visual and structural labels;
+- uncertainty estimation, confidence calibration and abstention;
+- controlled online adaptation to changing market behaviour;
+- robust validation across time periods, securities and regimes.
 
 ## Proposed architecture
 
-The planned system contains:
+RAMNA is planned as a modular system containing:
 
-1. separate sequence encoders for multiple timeframes;
-2. a hierarchical multitimeframe fusion module;
-3. a cross-sectional and relative-context encoder;
-4. a market-regime and gating model;
-5. specialist prediction heads;
-6. historical-analogue retrieval;
-7. uncertainty and abstention outputs.
+1. separate sequence encoders for each timeframe;
+2. a hierarchical multiscale fusion module;
+3. a path-structure representation encoder;
+4. a cross-sectional and relative-context encoder;
+5. a market-regime representation and gating model;
+6. specialist prediction heads for distinct setup families;
+7. a historical-analogue embedding and retrieval module;
+8. uncertainty, calibration and abstention outputs;
+9. controlled adaptation and drift-monitoring components.
 
 ## Why GPU compute is required
 
-The research requires repeated training of sequence encoders across a large
-universe of financial time series, multiple temporal folds, random seeds and
-robustness tests.
+The research requires repeated training of temporal and multiscale encoders across a large universe of financial time series, multiple temporal folds, random seeds and robustness tests.
 
-GPU compute would be used for:
+GPU compute is needed for:
 
-- training temporal convolutional and transformer-based encoders;
-- multitimeframe representation learning;
-- contrastive or self-supervised pretraining;
-- controlled architecture comparisons;
-- walk-forward and out-of-distribution validation.
+- temporal convolutional, recurrent, state-space and transformer-based encoders;
+- hierarchical multitimeframe representation learning;
+- contrastive and self-supervised pretraining;
+- cross-sectional and historical-analogue embeddings;
+- controlled architecture comparisons and ablations;
+- walk-forward, out-of-distribution and regime-specific validation;
+- repeated robustness testing across seeds and market periods.
 
 ## Current stage
 
-The project is currently in the architecture-design and data-preparation stage.
-The available data pipeline includes large historical OHLCV datasets covering
-multiple securities and market periods.
+The project is currently in the architecture-design and data-preparation stage. A preceding modular boosted-tree research system provides the baseline feature pipeline, specialist-model structure, validation framework and evidence needed to design the neural extension responsibly.
 
-Initial GPU access would be used to build and validate the first compact
-multitimeframe prototype before expanding the architecture.
+Initial GPU access will be used to build and validate a compact RAMNA prototype before expanding the architecture.
 
 ## Reproducibility
 
@@ -67,11 +65,11 @@ The project will use:
 - deterministic data splits;
 - portable containers;
 - frequent resumable checkpoints;
-- documented experiments;
-- strict out-of-sample validation.
+- dataset and feature fingerprints;
+- documented experiments and ablations;
+- strict out-of-sample validation;
+- leakage, drift and shortcut-learning tests.
 
 ## Public scope
 
-This repository documents the general research architecture and methodology.
-Private datasets, proprietary trading labels, execution logic and final model
-weights are not included.
+This repository documents the general research architecture and methodology. Private datasets, proprietary trading labels, execution logic, trained production weights and potentially exploitable trading information are not included.
