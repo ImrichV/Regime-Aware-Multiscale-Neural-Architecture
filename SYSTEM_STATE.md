@@ -10,23 +10,30 @@ Last updated: 2026-08-11
 - Protocol version: MQVRIP v0.1
 - Authoritative protocol: `MASTER_QUALITY_PROTOCOL.md`
 - Approved protocol SHA-256: `6E188E56876FC76B714F5A33E2DE5562ABC743DBE2A67606A9662A174C546C6B`
-- Approved AGENTS SHA-256: `98A58D9AE4FC35D56E699FA3CA47A246015DF488562E641D8D34953399EADA57`
+- Approved AGENTS SHA-256: `B4D5DC1CB165D35171CB073D9D42503840603E31453E7073DA213AF4518EA3FD`
+- Lifecycle version: CSL v0.1
+- Authoritative lifecycle: `architecture/CANONICAL_SYSTEM_LIFECYCLE.md`
+- Approved lifecycle SHA-256: `9F243F31D524F16E2B007413B7379E25CB14AF4EE947BB97A6502E87166E1686`
 - Historical source snapshot: `Master_Quality_Verfication_Research_Integrity/MQVRIP v0.1.md`
 - Project instructions: `AGENTS.md`
 - Governance preflight: `quality/gates/G00_governance_preflight.ps1`
 - Public-publication preflight: `quality/gates/G01_publication_preflight.ps1`
+- Lifecycle preflight: `quality/gates/G02_lifecycle_preflight.ps1`
+- Automatic repository preflight: `.github/workflows/quality-preflight.yml`
 - Latest preflight evidence: `quality/evidence/governance_preflight.latest.json`
 - Latest publication evidence: `quality/evidence/publication_preflight.latest.json`
+- Latest lifecycle evidence: `quality/evidence/lifecycle_preflight.latest.json`
 - Latest GitHub synchronization receipt: `quality/evidence/github_sync.latest.json`
 - Controlled protocol-tamper test evidence: `quality/evidence/governance_preflight.protocol_tamper_test.json`
 - Controlled instruction-tamper test evidence: `quality/evidence/governance_preflight.agents_tamper_test.json`
 - Controlled publication-secret test evidence: `quality/evidence/publication_preflight.secret_test.json`
+- Controlled lifecycle-tamper test evidence: `quality/evidence/lifecycle_preflight.tamper_test.json`
 
 ## Current phase
 
-Governance foundation established and published to GitHub `main`. Detailed neural architecture has not been designed or approved.
+Governance foundation is established. The canonical architecture-independent lifecycle and G02 enforcement pass locally and are pending controlled public synchronization. Detailed neural architecture has not been designed or approved.
 
-The current work is limited to creating and validating the persistent quality-control foundation derived from MQVRIP. This state does not authorize data qualification, model training, remote compute, model promotion, or production use.
+The current work is limited to publishing and remotely verifying CSL v0.1, G02, and the automatic repository preflight. This state does not authorize data qualification, model training, remote compute, model promotion, or production use.
 
 ## Public GitHub synchronization
 
@@ -35,7 +42,7 @@ The current work is limited to creating and validating the persistent quality-co
 - Public repository policy: `PUBLIC_REPOSITORY_POLICY.md`
 - Approved-path allowlist: `quality/publication/approved_paths.txt`
 - Generated public manifest: `PUBLICATION_MANIFEST.json`
-- Synchronization status: INITIAL SAFETY FOUNDATION MERGED INTO `main`
+- Synchronization status: INITIAL SAFETY FOUNDATION CURRENT; LIFECYCLE ENFORCEMENT PUBLICATION PENDING
 - Remote baseline before this publication: `main` commit `50dd6c68a91e56cf03758e1f816f2be47c91fe3a`
 - Publication branch: `agent/public-safety-foundation`
 - Merged pull request: `https://github.com/ImrichV/Regime-Aware-Multiscale-Neural-Architecture/pull/1`
@@ -50,8 +57,11 @@ The local project is the active working area. GitHub `main` is the latest approv
 | MQVRIP v0.1 | BASELINE | Governing constitution; content identity recorded above |
 | `AGENTS.md` | ACTIVE | Mandatory Codex working rules for this project tree |
 | `SYSTEM_STATE.md` | ACTIVE | Current truth and authorization boundary |
+| Canonical system lifecycle CSL v0.1 | ACTIVE | Mandatory architecture-independent stages, boundaries, authorization, and invalidation map; content identity recorded above |
 | Governance preflight G00 | ACTIVE | Detects missing control files, protocol hash drift, and missing mandatory instructions |
 | Public-publication preflight G01 | ACTIVE | Restricts public upload to allowlisted, small, content-scanned files and generates an identity manifest |
+| Lifecycle preflight G02 | ACTIVE | Rejects lifecycle identity drift, missing stages/boundaries, missing persistent instructions, and missing automatic workflow wiring |
+| Automatic repository quality workflow | IMPLEMENTED, NOT YET REMOTELY VERIFIED | Runs public-scope, G00, G02, and G01 checks on pull requests and changes to `main` |
 | Neural architecture | NOT DESIGNED | No architecture decision has been approved |
 | Data-source eligibility | NOT STARTED | No source has passed PIT and live-feed eligibility in this project |
 | Training authorization | DENIED | Required data, split, model-input, and training gates do not yet exist or pass |
@@ -63,11 +73,15 @@ The local project is the active working area. GitHub `main` is the latest approv
 - The approved protocol content has a recorded SHA-256 identity.
 - The mandatory project instructions have a recorded SHA-256 identity.
 - Persistent project instructions require MQVRIP use, evidence-based completion, hard-gate compliance, change-impact analysis, downstream invalidation, and System Coherence review.
+- Persistent project instructions require every material task to declare its lifecycle stages, boundaries, failure modes, required evidence, and downstream invalidation.
 - A machine-executable governance preflight checks the presence and consistency of the safety foundation.
 - A controlled fault injection proved that modifying the protocol without updating its approved identity is rejected.
 - A second controlled fault injection proved that modifying the mandatory project instructions without updating their approved identity is rejected.
 - G01 passed on the approved publication set and generated a file-identity manifest.
 - A controlled fake-credential injection in an isolated copy was rejected by G01's content-safety check.
+- G02 passed on CSL v0.1, all 18 lifecycle stages, all 18 boundaries, persistent instructions, current state, and automatic workflow wiring.
+- A controlled lifecycle modification was rejected because its identity no longer matched the approved lifecycle SHA-256.
+- A second controlled violation updated the hash but removed stage `L17`; G02 independently rejected the incomplete structure.
 
 These checks verify governance setup only. They do not validate any future data, architecture, model, result, or production behavior.
 
@@ -77,7 +91,7 @@ These checks verify governance setup only. They do not validate any future data,
 
 - Local Git remains unavailable. Remote GitHub version control is connected through the authorized GitHub integration. Important implementation and runs must reference a verified published GitHub commit; the initial safety baseline is commit `890622beb4522c9990c3ff5a7044ba75536c279a`. Unpublished local state is not a reproducible run identity.
 - The Master System Architecture Specification does not yet exist.
-- No executable component-specific MQVRIP gates exist beyond governance preflight G00.
+- No executable component-specific MQVRIP gates exist beyond the foundation controls G00, G01, and G02. Component gates must be added only when their real lifecycle stages require them.
 - No evidence registry or dependency invalidation engine exists yet. These should be added only when real artifacts and dependencies make them necessary.
 
 ### Scientific and data blockers
@@ -98,9 +112,9 @@ Absence from these lists is not evidence of eligibility. An object becomes eligi
 
 ## Next permitted work
 
-1. Define the canonical end-to-end system lifecycle and its formal boundaries inside MQVRIP constraints.
+1. Publish, remotely verify, and merge the lifecycle enforcement foundation; confirm the automatic GitHub workflow passes remotely.
 2. Qualify the early Stooq-versus-Alpaca historical/live price-data constraint before serious price-model architecture decisions.
-3. Compare high-level architecture alternatives and develop the Master System Architecture Specification.
+3. Compare high-level architecture alternatives and develop the Master System Architecture Specification inside CSL `L01`/`B01`.
 4. As each real component is defined, add the smallest necessary contract, gate, evidence output, and invalidation relationship before allowing risky downstream work.
 
 ## Required update rule
