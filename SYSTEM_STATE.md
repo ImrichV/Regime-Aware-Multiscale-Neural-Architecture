@@ -24,7 +24,7 @@ Last updated: 2026-08-11
 
 ## Current phase
 
-Governance foundation established. Detailed neural architecture has not been designed or approved.
+Governance foundation established and published to GitHub `main`. Detailed neural architecture has not been designed or approved.
 
 The current work is limited to creating and validating the persistent quality-control foundation derived from MQVRIP. This state does not authorize data qualification, model training, remote compute, model promotion, or production use.
 
@@ -35,12 +35,13 @@ The current work is limited to creating and validating the persistent quality-co
 - Public repository policy: `PUBLIC_REPOSITORY_POLICY.md`
 - Approved-path allowlist: `quality/publication/approved_paths.txt`
 - Generated public manifest: `PUBLICATION_MANIFEST.json`
-- Synchronization status: DRAFT PR OPEN; REMOTE FILE IDENTITIES VERIFIED; `main` NOT YET UPDATED
+- Synchronization status: INITIAL SAFETY FOUNDATION MERGED INTO `main`
 - Remote baseline before this publication: `main` commit `50dd6c68a91e56cf03758e1f816f2be47c91fe3a`
 - Publication branch: `agent/public-safety-foundation`
-- Draft pull request: `https://github.com/ImrichV/Regime-Aware-Multiscale-Neural-Architecture/pull/1`
+- Merged pull request: `https://github.com/ImrichV/Regime-Aware-Multiscale-Neural-Architecture/pull/1`
+- Initial accepted public commit: `890622beb4522c9990c3ff5a7044ba75536c279a`
 
-The local project is the active working area. GitHub `main` becomes the latest approved public snapshot only after G00 and G01 pass and every remote Git blob identity matches the local publication manifest.
+The local project is the active working area. GitHub `main` is the latest approved public snapshot. The initial safety foundation was accepted only after G00 and G01 passed and every remote Git blob identity matched the local publication manifest.
 
 ## Current authoritative objects
 
@@ -74,7 +75,7 @@ These checks verify governance setup only. They do not validate any future data,
 
 ### Blockers before implementation or training
 
-- Local Git remains unavailable. Remote GitHub version control is connected through the authorized GitHub integration. Important implementation and runs must reference a verified published GitHub commit; unpublished local state is not a reproducible run identity.
+- Local Git remains unavailable. Remote GitHub version control is connected through the authorized GitHub integration. Important implementation and runs must reference a verified published GitHub commit; the initial safety baseline is commit `890622beb4522c9990c3ff5a7044ba75536c279a`. Unpublished local state is not a reproducible run identity.
 - The Master System Architecture Specification does not yet exist.
 - No executable component-specific MQVRIP gates exist beyond governance preflight G00.
 - No evidence registry or dependency invalidation engine exists yet. These should be added only when real artifacts and dependencies make them necessary.
@@ -97,9 +98,10 @@ Absence from these lists is not evidence of eligibility. An object becomes eligi
 
 ## Next permitted work
 
-1. Review and merge the controlled GitHub pull request into `main`.
-2. Begin architecture planning inside MQVRIP constraints.
-3. As each real component is defined, add the smallest necessary contract, gate, evidence output, and invalidation relationship before allowing risky downstream work.
+1. Define the canonical end-to-end system lifecycle and its formal boundaries inside MQVRIP constraints.
+2. Qualify the early Stooq-versus-Alpaca historical/live price-data constraint before serious price-model architecture decisions.
+3. Compare high-level architecture alternatives and develop the Master System Architecture Specification.
+4. As each real component is defined, add the smallest necessary contract, gate, evidence output, and invalidation relationship before allowing risky downstream work.
 
 ## Required update rule
 
