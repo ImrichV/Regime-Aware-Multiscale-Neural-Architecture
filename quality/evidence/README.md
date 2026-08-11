@@ -8,6 +8,8 @@ This directory contains machine-readable evidence produced by MQVRIP gates.
 
 `governance_preflight.agents_tamper_test.json` records a separate controlled fault injection. Its expected `FAIL` proves that G00 rejects altered mandatory project instructions whose hash no longer matches the approved identity.
 
+`governance_preflight.gitattributes_test.json` records an isolated missing-`.gitattributes` violation. Its expected `FAIL` proves that G00 requires the repository rule that preserves identical LF text bytes across local and GitHub environments.
+
 Evidence files demonstrate only the claims made by their specific gate. A passing governance preflight does not validate data, architecture, training, models, or production behavior.
 
 `publication_preflight.latest.json` is local-only evidence from G01. It may contain local paths and must not be uploaded to the public repository.
