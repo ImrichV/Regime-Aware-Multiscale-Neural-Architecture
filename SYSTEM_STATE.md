@@ -26,6 +26,7 @@ Last updated: 2026-08-11
 - Latest GitHub synchronization receipt: `quality/evidence/github_sync.latest.json`
 - Controlled protocol-tamper test evidence: `quality/evidence/governance_preflight.protocol_tamper_test.json`
 - Controlled instruction-tamper test evidence: `quality/evidence/governance_preflight.agents_tamper_test.json`
+- Controlled line-ending-control test evidence: `quality/evidence/governance_preflight.gitattributes_test.json`
 - Controlled publication-secret test evidence: `quality/evidence/publication_preflight.secret_test.json`
 - Controlled lifecycle-tamper test evidence: `quality/evidence/lifecycle_preflight.tamper_test.json`
 
@@ -77,6 +78,7 @@ The local project is the active working area. GitHub `main` is the latest approv
 - A machine-executable governance preflight checks the presence and consistency of the safety foundation.
 - A controlled fault injection proved that modifying the protocol without updating its approved identity is rejected.
 - A second controlled fault injection proved that modifying the mandatory project instructions without updating their approved identity is rejected.
+- A controlled missing-`.gitattributes` violation proved that G00 requires the cross-environment LF identity rule.
 - G01 passed on the approved publication set and generated a file-identity manifest.
 - A controlled fake-credential injection in an isolated copy was rejected by G01's content-safety check.
 - G02 passed on CSL v0.1, all 18 lifecycle stages, all 18 boundaries, persistent instructions, current state, and automatic workflow wiring.
