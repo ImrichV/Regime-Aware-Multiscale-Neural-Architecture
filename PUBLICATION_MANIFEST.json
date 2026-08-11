@@ -2,7 +2,7 @@
     "schema_version":  1,
     "repository":  "ImrichV/Regime-Aware-Multiscale-Neural-Architecture",
     "visibility":  "public",
-    "generated_utc":  "2026-08-11T10:22:08.8068505Z",
+    "generated_utc":  "2026-08-11T10:29:01.7731883Z",
     "publication_rule":  "Only listed files plus this manifest are eligible for the controlled GitHub publication.",
     "files":  [
                   {
@@ -55,9 +55,9 @@
                   },
                   {
                       "path":  "SYSTEM_STATE.md",
-                      "bytes":  7072,
-                      "sha256":  "73fa17618f0c497c0d99a09d6077d92cddfb3af886f2b2a43e8c06e840775533",
-                      "git_blob_sha1":  "92250c47430902ecdb3ca4eb367332aeb2d7dcab"
+                      "bytes":  7152,
+                      "sha256":  "918f3ba43327f684f710c50ffe1adec7014e6843152befcabc17074b80108fc9",
+                      "git_blob_sha1":  "3837a9babeff1308b520b8113631223f1db6e88a"
                   }
               ]
 }
