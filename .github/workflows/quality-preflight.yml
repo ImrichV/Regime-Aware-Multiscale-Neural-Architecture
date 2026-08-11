@@ -24,7 +24,7 @@ jobs:
 
     steps:
       - name: Read repository snapshot
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Verify every public path is allowlisted
         shell: pwsh
@@ -51,4 +51,3 @@ jobs:
       - name: G01 publication preflight
         shell: pwsh
         run: ./quality/gates/G01_publication_preflight.ps1
-
