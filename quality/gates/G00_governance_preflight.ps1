@@ -14,6 +14,10 @@ if (-not $EvidencePath) {
 $agentsPath = Join-Path $projectRoot 'AGENTS.md'
 $protocolPath = Join-Path $projectRoot 'MASTER_QUALITY_PROTOCOL.md'
 $statePath = Join-Path $projectRoot 'SYSTEM_STATE.md'
+$lifecyclePath = Join-Path $projectRoot 'architecture\CANONICAL_SYSTEM_LIFECYCLE.md'
+$lifecycleGatePath = Join-Path $projectRoot 'quality\gates\G02_lifecycle_preflight.ps1'
+$workflowPath = Join-Path $projectRoot '.github\workflows\quality-preflight.yml'
+$attributesPath = Join-Path $projectRoot '.gitattributes'
 $checks = [System.Collections.Generic.List[object]]::new()
 
 function Add-Check {
@@ -30,7 +34,7 @@ function Add-Check {
     })
 }
 
-foreach ($required in @($agentsPath, $protocolPath, $statePath)) {
+foreach ($required in @($agentsPath, $protocolPath, $statePath, $lifecyclePath, $lifecycleGatePath, $workflowPath, $attributesPath)) {
     Add-Check -Id ('FILE_' + [IO.Path]::GetFileName($required).ToUpperInvariant()) -Passed (Test-Path -LiteralPath $required -PathType Leaf) -Detail $required
 }
 
@@ -71,7 +75,10 @@ if ($requiredFilesPresent) {
 
     foreach ($requiredInstruction in @(
         'MASTER_QUALITY_PROTOCOL.md',
+        'architecture/CANONICAL_SYSTEM_LIFECYCLE.md',
         'SYSTEM_STATE.md',
+        'G02_lifecycle_preflight.ps1',
+        'Lifecycle Impact Declaration',
         'Never bypass, weaken, relabel, or silently ignore a failed hard gate',
         'System Coherence Gate',
         'STALE',

@@ -3,7 +3,11 @@ AGENTS.md
 MASTER_QUALITY_PROTOCOL.md
 SYSTEM_STATE.md
 PUBLIC_REPOSITORY_POLICY.md
+.gitattributes
+.github/workflows/quality-preflight.yml
+architecture/CANONICAL_SYSTEM_LIFECYCLE.md
 quality/gates/G00_governance_preflight.ps1
 quality/gates/G01_publication_preflight.ps1
+quality/gates/G02_lifecycle_preflight.ps1
 quality/evidence/README.md
 quality/publication/approved_paths.txt

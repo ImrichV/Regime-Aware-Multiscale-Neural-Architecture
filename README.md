@@ -21,8 +21,11 @@ The project simultaneously follows Occam's razor: complexity must protect agains
 - `MASTER_QUALITY_PROTOCOL.md` contains the governing constitution.
 - `AGENTS.md` contains mandatory working rules for Codex.
 - `SYSTEM_STATE.md` records the current phase, blockers, eligibility states, and permitted next work.
+- `architecture/CANONICAL_SYSTEM_LIFECYCLE.md` maps every material task and artifact to mandatory stages, boundaries, evidence, and invalidation rules.
 - `PUBLIC_REPOSITORY_POLICY.md` defines what may and may not be published here.
 - `quality/gates/` contains executable safety gates as they become necessary.
+
+Every material architecture, data, code, interface, training, evaluation, compute, and production task must identify its lifecycle stages and boundaries. G02 rejects silent lifecycle drift, and the repository quality workflow runs the foundation gates automatically on pull requests and changes to `main`.
 
 GitHub `main` is intended to represent the latest approved public snapshot. Work in progress is published only through a controlled branch after the public-publication gate passes.
 

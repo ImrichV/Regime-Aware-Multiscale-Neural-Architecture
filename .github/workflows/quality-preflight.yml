@@ -1,0 +1,53 @@
+name: Quality preflight
+
+on:
+  pull_request:
+    branches:
+      - main
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: quality-preflight-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  enforce-foundations:
+    name: Enforce governance, lifecycle, and public scope
+    runs-on: windows-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Read repository snapshot
+        uses: actions/checkout@v5
+
+      - name: Verify every public path is allowlisted
+        shell: pwsh
+        run: |
+          $ErrorActionPreference = 'Stop'
+          $allowed = @(Get-Content -LiteralPath 'quality/publication/approved_paths.txt' |
+            ForEach-Object { $_.Trim().Replace('\', '/') } |
+            Where-Object { $_ -and -not $_.StartsWith('#') })
+          $allowed += 'PUBLICATION_MANIFEST.json'
+          $tracked = @(git ls-files | ForEach-Object { $_.Trim().Replace('\', '/') })
+          $unexpected = @($tracked | Where-Object { $allowed -notcontains $_ })
+          if ($unexpected.Count -gt 0) {
+            Write-Error ('Tracked public paths are not allowlisted: ' + ($unexpected -join ', '))
+          }
+
+      - name: G00 governance preflight
+        shell: pwsh
+        run: ./quality/gates/G00_governance_preflight.ps1
+
+      - name: G02 lifecycle preflight
+        shell: pwsh
+        run: ./quality/gates/G02_lifecycle_preflight.ps1
+
+      - name: G01 publication preflight
+        shell: pwsh
+        run: ./quality/gates/G01_publication_preflight.ps1
