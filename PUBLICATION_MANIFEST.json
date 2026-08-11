@@ -2,14 +2,20 @@
     "schema_version":  1,
     "repository":  "ImrichV/Regime-Aware-Multiscale-Neural-Architecture",
     "visibility":  "public",
-    "generated_utc":  "2026-08-11T12:15:11.7954910Z",
+    "generated_utc":  "2026-08-11T12:21:07.6448725Z",
     "publication_rule":  "Only listed files plus this manifest are eligible for the controlled GitHub publication.",
     "files":  [
                   {
+                      "path":  ".gitattributes",
+                      "bytes":  15,
+                      "sha256":  "38ad0f3d409005e82afa59e937866a22fc33080b101089fac079ff4c4398eeba",
+                      "git_blob_sha1":  "99cda562a25997eb06087bc5d6dcde1b8f0667e1"
+                  },
+                  {
                       "path":  ".github/workflows/quality-preflight.yml",
-                      "bytes":  1538,
-                      "sha256":  "499c2380b4bf7c9e2c6b6bc396d64d5c3fd656c786bd287ebe094de632f6ce35",
-                      "git_blob_sha1":  "af35b4678595ed599f9596efa49f22a2f70637bd"
+                      "bytes":  1537,
+                      "sha256":  "15fdc370fbd86d0fb8ba6c76269b078f4d9e54453891fb6bcfaeebbada785997",
+                      "git_blob_sha1":  "727ae9db67070410cb6440c86b06a808ee53c129"
                   },
                   {
                       "path":  "AGENTS.md",
@@ -37,21 +43,21 @@
                   },
                   {
                       "path":  "quality/evidence/README.md",
-                      "bytes":  2299,
-                      "sha256":  "28eec9a1ac64c763d90ea106cf58b49589e9ef7b71d7102236474fbdc0f89f36",
-                      "git_blob_sha1":  "f7e97270ad633ea94fcd454db84803e5d77a2f99"
+                      "bytes":  2545,
+                      "sha256":  "d880cc30a4ca6b16097234246058fc3d7c7a6aab56a89d59f2527c57af959401",
+                      "git_blob_sha1":  "92361b03f6f5002d2516472d1de02d0d9894e759"
                   },
                   {
                       "path":  "quality/gates/G00_governance_preflight.ps1",
-                      "bytes":  6056,
-                      "sha256":  "a20dc73fbf55041c61a7b1f16dda7ec30a02eface6f2cacb3eae393f19a528ad",
-                      "git_blob_sha1":  "58c373c9eca2dffe40d033be413a8246c98d5ceb"
+                      "bytes":  6131,
+                      "sha256":  "d35701099c1236bb47654d06c04b3605fe46993e8d38a020fe8660e4c45f1e8d",
+                      "git_blob_sha1":  "b22fa68da654a1f8a8eccd3d4786db96a8bbfc93"
                   },
                   {
                       "path":  "quality/gates/G01_publication_preflight.ps1",
-                      "bytes":  7945,
-                      "sha256":  "eb62a878b510496ea475b245b112336f35c5f507db93626ec5db972bed77fb61",
-                      "git_blob_sha1":  "ee02cdc0774055f466086f5d19af53e28ffc66ee"
+                      "bytes":  8097,
+                      "sha256":  "ee1b8f96311f9453c707e8c0d8dc443a678d12444c93c51d339e4e9a59b1330f",
+                      "git_blob_sha1":  "b94d549e788774942c97ddcbdfa1f5a42ae23079"
                   },
                   {
                       "path":  "quality/gates/G02_lifecycle_preflight.ps1",
@@ -61,9 +67,9 @@
                   },
                   {
                       "path":  "quality/publication/approved_paths.txt",
-                      "bytes":  369,
-                      "sha256":  "b83a1bc071c48f5bdc1bf58ed24c1aa2bb7b577dea3d6454d502ab6050642b7a",
-                      "git_blob_sha1":  "96672f17203f89b71ba26a01c6acc2be37ad4395"
+                      "bytes":  384,
+                      "sha256":  "7865e2db8590f08c87d86cad664c3e24b8081048df88ca1c87dfe2e48aacc13a",
+                      "git_blob_sha1":  "78cb782fd1fcb2a609f573ef4d19cc1aa2336ef5"
                   },
                   {
                       "path":  "README.md",
@@ -73,9 +79,9 @@
                   },
                   {
                       "path":  "SYSTEM_STATE.md",
-                      "bytes":  9458,
-                      "sha256":  "30257973fbd07fe05db9198ffe401dea861a87820d08c0969d20ab61c4f89b06",
-                      "git_blob_sha1":  "d0977db01b15ae22d7bf1e5157456d94b5a85a98"
+                      "bytes":  9685,
+                      "sha256":  "b5975425557e699141fceac698d856e6b3fda74e6c9224542954b602e6eda44c",
+                      "git_blob_sha1":  "98cb97f1beec9f63060135d69c7a9dbfeb0e722c"
                   }
               ]
 }
