@@ -17,6 +17,7 @@ $statePath = Join-Path $projectRoot 'SYSTEM_STATE.md'
 $lifecyclePath = Join-Path $projectRoot 'architecture\CANONICAL_SYSTEM_LIFECYCLE.md'
 $lifecycleGatePath = Join-Path $projectRoot 'quality\gates\G02_lifecycle_preflight.ps1'
 $workflowPath = Join-Path $projectRoot '.github\workflows\quality-preflight.yml'
+$attributesPath = Join-Path $projectRoot '.gitattributes'
 $checks = [System.Collections.Generic.List[object]]::new()
 
 function Add-Check {
@@ -33,7 +34,7 @@ function Add-Check {
     })
 }
 
-foreach ($required in @($agentsPath, $protocolPath, $statePath, $lifecyclePath, $lifecycleGatePath, $workflowPath)) {
+foreach ($required in @($agentsPath, $protocolPath, $statePath, $lifecyclePath, $lifecycleGatePath, $workflowPath, $attributesPath)) {
     Add-Check -Id ('FILE_' + [IO.Path]::GetFileName($required).ToUpperInvariant()) -Passed (Test-Path -LiteralPath $required -PathType Leaf) -Detail $required
 }
 
