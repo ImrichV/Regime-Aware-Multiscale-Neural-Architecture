@@ -1,0 +1,9 @@
+README.md
+AGENTS.md
+MASTER_QUALITY_PROTOCOL.md
+SYSTEM_STATE.md
+PUBLIC_REPOSITORY_POLICY.md
+quality/gates/G00_governance_preflight.ps1
+quality/gates/G01_publication_preflight.ps1
+quality/evidence/README.md
+quality/publication/approved_paths.txt
