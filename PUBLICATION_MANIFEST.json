@@ -1,0 +1,63 @@
+{
+    "schema_version":  1,
+    "repository":  "ImrichV/Regime-Aware-Multiscale-Neural-Architecture",
+    "visibility":  "public",
+    "generated_utc":  "2026-08-11T10:22:08.8068505Z",
+    "publication_rule":  "Only listed files plus this manifest are eligible for the controlled GitHub publication.",
+    "files":  [
+                  {
+                      "path":  "AGENTS.md",
+                      "bytes":  7251,
+                      "sha256":  "98a58d9ae4fc35d56e699fa3ca47a246015df488562e641d8d34953399eada57",
+                      "git_blob_sha1":  "a328ed1288e563215ce7a2d085557dde99b9ff72"
+                  },
+                  {
+                      "path":  "MASTER_QUALITY_PROTOCOL.md",
+                      "bytes":  45424,
+                      "sha256":  "6e188e56876fc76b714f5a33e2de5562abc743dbe2a67606a9662a174c546c6b",
+                      "git_blob_sha1":  "f1cf4ec63f393d51a3bb8be9fc906294887b4bc5"
+                  },
+                  {
+                      "path":  "PUBLIC_REPOSITORY_POLICY.md",
+                      "bytes":  3380,
+                      "sha256":  "11a9d8fde744d3a956ce3c52f73e2f7ebda1f95f2a10f3894a6e016533ff0340",
+                      "git_blob_sha1":  "a1541bb3100ad85a4f90022a0e6180e779cfef87"
+                  },
+                  {
+                      "path":  "quality/evidence/README.md",
+                      "bytes":  1510,
+                      "sha256":  "96bc0c158ca363fc40cf830c5085bb9e6caf083ee7c18fb8abad8f1a620fbb77",
+                      "git_blob_sha1":  "2092b5ff6d6706d7ed1c9acf79a7bf70e88e9784"
+                  },
+                  {
+                      "path":  "quality/gates/G00_governance_preflight.ps1",
+                      "bytes":  5618,
+                      "sha256":  "2cb5a4aa512f518f471bccefb7597e1bcb44bead219e3fc65074142b4cc8a09a",
+                      "git_blob_sha1":  "ebe7cb6aa925f8dc1032e5ed1f5beda1af3402d5"
+                  },
+                  {
+                      "path":  "quality/gates/G01_publication_preflight.ps1",
+                      "bytes":  7945,
+                      "sha256":  "eb62a878b510496ea475b245b112336f35c5f507db93626ec5db972bed77fb61",
+                      "git_blob_sha1":  "ee02cdc0774055f466086f5d19af53e28ffc66ee"
+                  },
+                  {
+                      "path":  "quality/publication/approved_paths.txt",
+                      "bytes":  244,
+                      "sha256":  "0c4cf8ab91a5ea7884c02a820f7c8e5a1f8b6d8bf78eb639d340344b0d38970a",
+                      "git_blob_sha1":  "ddb7ed16f04afe991fea3e4c7794ca285c136a25"
+                  },
+                  {
+                      "path":  "README.md",
+                      "bytes":  2251,
+                      "sha256":  "36c25b67d354fa2f3b91a940ee5f3f837a0124682570d325de945f3b7a223510",
+                      "git_blob_sha1":  "858ee2857f88e3c2c7058aef332698d6aefdbb88"
+                  },
+                  {
+                      "path":  "SYSTEM_STATE.md",
+                      "bytes":  7072,
+                      "sha256":  "73fa17618f0c497c0d99a09d6077d92cddfb3af886f2b2a43e8c06e840775533",
+                      "git_blob_sha1":  "92250c47430902ecdb3ca4eb367332aeb2d7dcab"
+                  }
+              ]
+}
