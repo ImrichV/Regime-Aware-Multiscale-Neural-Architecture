@@ -871,7 +871,279 @@ These tests help detect systems capable of producing impressive-looking nonsense
 
 Before expensive training:
 
-Train …1356 tokens truncated…e applicable capture:
+Train on a deliberately tiny dataset.
+
+The model should normally be capable of fitting it extremely well when architecture/objective permit.
+
+Failure may indicate:
+
+- disconnected gradients;
+- incorrect loss;
+- wrong targets;
+- bad masks;
+- tensor wiring error;
+- optimizer problem;
+- architecture bug;
+- data corruption.
+
+This is a **debugging qualification**, not evidence of generalization.
+
+---
+
+# 29. RESEARCH CLAIM REGISTRY
+
+Every meaningful research attempt receives a permanent record.
+
+Not only successful experiments.
+
+Store:
+
+- hypothesis/question;
+- data version;
+- architecture/config;
+- objective;
+- split;
+- seeds;
+- metrics;
+- result;
+- failure reason;
+- decision.
+
+This prevents a final winner from appearing as though it emerged from one clean attempt when hundreds of alternatives were searched.
+
+---
+
+# 30. SIMPLE BASELINE REQUIREMENT
+
+Sophisticated neural systems must be compared against appropriately simple references.
+
+The purpose is not to prefer simple models automatically.
+
+The purpose is to answer:
+
+> Did the complexity actually buy anything?
+
+Potential baseline categories will later be selected per task.
+
+Complexity earns its place.
+
+---
+
+# 31. MODULE / DATA-SOURCE VALUE CLAIMS
+
+Later, if we claim:
+
+**“Source X helps.”**
+
+or
+
+**“Module Y adds no value.”**
+
+the conclusion cannot depend on one training run.
+
+The evidence should consider, where appropriate:
+
+- multiple seeds;
+- different time periods;
+- different market conditions;
+- relevant entity subsets;
+- uncertainty;
+- incremental effect;
+- robustness;
+- interaction with other components;
+- computational cost;
+- stability.
+
+Removal of a potentially useful information source should require enough evidence that “no benefit” is not merely training noise.
+
+At the same time:
+
+> Inconclusive complexity does not automatically enter the production baseline.
+
+Occam applies.
+
+---
+
+# 32. PREDECLARED EXPERIMENT SPECIFICATION
+
+Before an expensive/important experiment begins, freeze:
+
+- question;
+- dataset version;
+- split;
+- architecture/configuration;
+- objective;
+- primary evaluation criteria;
+- seeds;
+- stopping rules where appropriate;
+- expected outputs.
+
+Changes after looking at results become a **new experiment**.
+
+They are not silently rewritten into the original experiment.
+
+---
+
+# 33. SEALED TRAINING BUNDLE
+
+Cloud/GPU training must never “figure out what experiment to run.”
+
+Local preparation creates a sealed bundle containing at minimum:
+
+- run ID;
+- exact code commit;
+- proof repository is in known state;
+- architecture configuration;
+- training configuration;
+- data manifest;
+- data hashes;
+- split manifest;
+- preprocessing/model-input version;
+- random-seed policy;
+- package/environment lock;
+- required runtime versions;
+- golden-test fixtures;
+- expected golden outputs;
+- synthetic/smoke-test specification;
+- training command;
+- checkpoint policy;
+- output manifest specification.
+
+The sealed bundle receives its own cryptographic identity.
+
+---
+
+# 34. REMOTE PROVIDER QUALIFICATION
+
+Before expensive GPU compute:
+
+### Stage A — environment verification
+
+Check:
+
+- expected OS/runtime;
+- GPU visible;
+- expected CUDA/runtime stack where relevant;
+- expected Python/packages;
+- required storage;
+- expected code.
+
+### Stage B — bundle identity
+
+Recalculate hashes remotely.
+
+Prove that remote:
+
+- code;
+- configuration;
+- data;
+- manifests
+
+match the sealed local bundle.
+
+### Stage C — golden tests
+
+Run canonical/model-input known-answer tests remotely.
+
+### Stage D — tiny smoke training
+
+Verify forward pass, backward pass, optimizer, checkpoint writing and loading.
+
+### Stage E — synthetic learnability test where required
+
+Only after all mandatory stages pass:
+
+**FULL TRAINING PERMITTED**
+
+---
+
+# 35. PROVIDER NEUTRALITY
+
+Compute provider must not determine scientific meaning.
+
+Provider adapters may handle:
+
+- provisioning;
+- authentication;
+- upload;
+- execution;
+- heartbeat;
+- checkpoints;
+- download;
+- shutdown.
+
+They may **not** silently alter:
+
+- dataset;
+- preprocessing;
+- model;
+- objective;
+- split;
+- hyperparameters.
+
+The experiment specification sits above provider infrastructure.
+
+This makes future providers replaceable.
+
+---
+
+# 36. REPRODUCIBILITY HAS TWO LEVELS
+
+Do not confuse them.
+
+## Deterministic reference reproducibility
+
+Used heavily for:
+
+- golden tests;
+- preprocessing;
+- inference;
+- small debugging runs;
+- critical calculations.
+
+Same controlled environment should reproduce results exactly or within an explicitly tiny numerical tolerance.
+
+## Statistical training reproducibility
+
+Large GPU training may differ slightly because of hardware/software numerical behavior.
+
+We therefore save:
+
+- seeds;
+- environment;
+- code;
+- data;
+- configuration
+
+and evaluate whether conclusions reproduce across controlled repetitions.
+
+We must **not falsely claim bit-for-bit identity across arbitrary GPU providers**.
+
+---
+
+# 37. RANDOMNESS CONTROL
+
+For every training run record relevant random states/seeds for:
+
+- Python;
+- numerical libraries;
+- neural framework;
+- CUDA/device RNG where applicable;
+- data sampling;
+- augmentation;
+- initialization.
+
+When deterministic algorithms are available and useful for qualification/debugging, use them.
+
+Performance runs may use justified nondeterministic operations only if their consequences have been assessed.
+
+---
+
+# 38. CHECKPOINT STANDARD
+
+A resumable checkpoint is more than neural weights.
+
+Where applicable capture:
 
 - model state;
 - optimizer state;
