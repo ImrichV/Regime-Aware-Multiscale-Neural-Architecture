@@ -32,9 +32,9 @@ Last updated: 2026-08-11
 
 ## Current phase
 
-Governance foundation is established. The canonical architecture-independent lifecycle and G02 enforcement pass locally and are pending controlled public synchronization. Detailed neural architecture has not been designed or approved.
+Governance foundation and canonical architecture-independent lifecycle CSL v0.1 are active. G00, G02, G01, remote file-identity verification, and the automatic GitHub workflow passed for the lifecycle publication checkpoint. Detailed neural architecture has not been designed or approved.
 
-The current work is limited to publishing and remotely verifying CSL v0.1, G02, and the automatic repository preflight. This state does not authorize data qualification, model training, remote compute, model promotion, or production use.
+The next scientific work is limited to early price-data qualification and high-level architecture planning inside CSL. This state does not authorize model training, remote compute, model promotion, or production use.
 
 ## Public GitHub synchronization
 
@@ -43,11 +43,12 @@ The current work is limited to publishing and remotely verifying CSL v0.1, G02, 
 - Public repository policy: `PUBLIC_REPOSITORY_POLICY.md`
 - Approved-path allowlist: `quality/publication/approved_paths.txt`
 - Generated public manifest: `PUBLICATION_MANIFEST.json`
-- Synchronization status: INITIAL SAFETY FOUNDATION CURRENT; LIFECYCLE ENFORCEMENT PUBLICATION PENDING
+- Synchronization status: CSL v0.1 PUBLICATION CHECKPOINT REMOTELY VERIFIED THROUGH PULL REQUEST 3
 - Remote baseline before this publication: `main` commit `50dd6c68a91e56cf03758e1f816f2be47c91fe3a`
 - Publication branch: `agent/public-safety-foundation`
 - Merged pull request: `https://github.com/ImrichV/Regime-Aware-Multiscale-Neural-Architecture/pull/1`
 - Initial accepted public commit: `890622beb4522c9990c3ff5a7044ba75536c279a`
+- Lifecycle publication pull request: `https://github.com/ImrichV/Regime-Aware-Multiscale-Neural-Architecture/pull/3`
 
 The local project is the active working area. GitHub `main` is the latest approved public snapshot. The initial safety foundation was accepted only after G00 and G01 passed and every remote Git blob identity matched the local publication manifest.
 
@@ -62,7 +63,7 @@ The local project is the active working area. GitHub `main` is the latest approv
 | Governance preflight G00 | ACTIVE | Detects missing control files, protocol hash drift, and missing mandatory instructions |
 | Public-publication preflight G01 | ACTIVE | Restricts public upload to allowlisted, small, content-scanned files and generates an identity manifest |
 | Lifecycle preflight G02 | ACTIVE | Rejects lifecycle identity drift, missing stages/boundaries, missing persistent instructions, and missing automatic workflow wiring |
-| Automatic repository quality workflow | IMPLEMENTED, NOT YET REMOTELY VERIFIED | Runs public-scope, G00, G02, and G01 checks on pull requests and changes to `main` |
+| Automatic repository quality workflow | ACTIVE, REMOTELY VERIFIED | Runs public-scope, G00, G02, and G01 checks on pull requests and changes to `main` |
 | Neural architecture | NOT DESIGNED | No architecture decision has been approved |
 | Data-source eligibility | NOT STARTED | No source has passed PIT and live-feed eligibility in this project |
 | Training authorization | DENIED | Required data, split, model-input, and training gates do not yet exist or pass |
@@ -84,6 +85,8 @@ The local project is the active working area. GitHub `main` is the latest approv
 - G02 passed on CSL v0.1, all 18 lifecycle stages, all 18 boundaries, persistent instructions, current state, and automatic workflow wiring.
 - A controlled lifecycle modification was rejected because its identity no longer matched the approved lifecycle SHA-256.
 - A second controlled violation updated the hash but removed stage `L17`; G02 independently rejected the incomplete structure.
+- The first remote workflow run rejected cross-environment line-ending identity drift; a repository-wide LF rule corrected the root cause, and the next GitHub workflow run passed all checks.
+- All 13 approved public file identities matched the regenerated local publication manifest after the portability fix.
 
 These checks verify governance setup only. They do not validate any future data, architecture, model, result, or production behavior.
 
@@ -95,6 +98,7 @@ These checks verify governance setup only. They do not validate any future data,
 - The Master System Architecture Specification does not yet exist.
 - No executable component-specific MQVRIP gates exist beyond the foundation controls G00, G01, and G02. Component gates must be added only when their real lifecycle stages require them.
 - No evidence registry or dependency invalidation engine exists yet. These should be added only when real artifacts and dependencies make them necessary.
+- GitHub required-check branch protection is not configured or verified because the connected integration does not expose repository rule management. The workflow runs automatically and Codex instructions prohibit merging without a pass, but a repository administrator could still manually bypass that procedural control. Reconsider branch protection before collaboration broadens or expensive compute begins.
 
 ### Scientific and data blockers
 
@@ -114,10 +118,9 @@ Absence from these lists is not evidence of eligibility. An object becomes eligi
 
 ## Next permitted work
 
-1. Publish, remotely verify, and merge the lifecycle enforcement foundation; confirm the automatic GitHub workflow passes remotely.
-2. Qualify the early Stooq-versus-Alpaca historical/live price-data constraint before serious price-model architecture decisions.
-3. Compare high-level architecture alternatives and develop the Master System Architecture Specification inside CSL `L01`/`B01`.
-4. As each real component is defined, add the smallest necessary contract, gate, evidence output, and invalidation relationship before allowing risky downstream work.
+1. Qualify the early Stooq-versus-Alpaca historical/live price-data constraint before serious price-model architecture decisions.
+2. Compare high-level architecture alternatives and develop the Master System Architecture Specification inside CSL `L01`/`B01`.
+3. As each real component is defined, add the smallest necessary contract, gate, evidence output, and invalidation relationship before allowing risky downstream work.
 
 ## Required update rule
 
