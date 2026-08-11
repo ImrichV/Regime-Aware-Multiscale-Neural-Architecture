@@ -35,9 +35,10 @@ The current work is limited to creating and validating the persistent quality-co
 - Public repository policy: `PUBLIC_REPOSITORY_POLICY.md`
 - Approved-path allowlist: `quality/publication/approved_paths.txt`
 - Generated public manifest: `PUBLICATION_MANIFEST.json`
-- Synchronization status: PUBLICATION IN PROGRESS
+- Synchronization status: DRAFT PR OPEN; REMOTE FILE IDENTITIES VERIFIED; `main` NOT YET UPDATED
 - Remote baseline before this publication: `main` commit `50dd6c68a91e56cf03758e1f816f2be47c91fe3a`
 - Publication branch: `agent/public-safety-foundation`
+- Draft pull request: `https://github.com/ImrichV/Regime-Aware-Multiscale-Neural-Architecture/pull/1`
 
 The local project is the active working area. GitHub `main` becomes the latest approved public snapshot only after G00 and G01 pass and every remote Git blob identity matches the local publication manifest.
 
@@ -96,10 +97,9 @@ Absence from these lists is not evidence of eligibility. An object becomes eligi
 
 ## Next permitted work
 
-1. Publish and remotely verify the initial public safety foundation.
-2. Review and merge the controlled GitHub pull request into `main`.
-3. Begin architecture planning inside MQVRIP constraints.
-4. As each real component is defined, add the smallest necessary contract, gate, evidence output, and invalidation relationship before allowing risky downstream work.
+1. Review and merge the controlled GitHub pull request into `main`.
+2. Begin architecture planning inside MQVRIP constraints.
+3. As each real component is defined, add the smallest necessary contract, gate, evidence output, and invalidation relationship before allowing risky downstream work.
 
 ## Required update rule
 
