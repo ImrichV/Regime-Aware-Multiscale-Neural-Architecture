@@ -97,7 +97,9 @@ foreach ($relativePath in $approvedPaths) {
     if (-not $exists) { continue }
 
     $extension = [IO.Path]::GetExtension($fullPath).ToLowerInvariant()
-    Add-Check -Id ('EXTENSION_ALLOWED_' + ($normalized -replace '[^A-Za-z0-9]+', '_').Trim('_').ToUpperInvariant()) -Passed ($allowedExtensions -contains $extension) -Detail "$normalized extension=$extension"
+    $fileName = [IO.Path]::GetFileName($fullPath).ToLowerInvariant()
+    $extensionIsAllowed = ($allowedExtensions -contains $extension) -or ($fileName -eq '.gitattributes')
+    Add-Check -Id ('EXTENSION_ALLOWED_' + ($normalized -replace '[^A-Za-z0-9]+', '_').Trim('_').ToUpperInvariant()) -Passed $extensionIsAllowed -Detail "$normalized extension=$extension"
 
     $item = Get-Item -LiteralPath $fullPath
     $totalBytes += $item.Length
